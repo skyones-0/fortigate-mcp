@@ -1,138 +1,138 @@
 # FortiGate MCP V7.6
 
-## Model Context Protocol para FortiGate V7.6
+## Model Context Protocol for FortiGate V7.6
 
-Un protocolo de contexto de modelo completo para FortiGate V7.6 que proporciona control total de todos los módulos de seguridad, validación de comandos con token, análisis detallado de cambios y función de rollback.
+A complete Model Context Protocol for FortiGate V7.6 that provides full control of all security modules, command validation with token authentication, detailed change analysis, and rollback functionality.
 
-## Características
+## Features
 
-- **Autenticación segura** con tokens de API de FortiGate
-- **Validación de comandos** antes de ejecución
-- **Análisis detallado de cambios** con impacto evaluado
-- **Función de rollback** para revertir cambios
-- **Cobertura completa** de módulos de seguridad FortiGate V7.6
-- **TypeScript** con tipos completos
-- **Logging completo** de auditoría y operaciones
+- **Secure authentication** with FortiGate API tokens
+- **Command validation** before execution
+- **Detailed change analysis** with impact assessment
+- **Rollback functionality** to revert changes
+- **Complete coverage** of FortiGate V7.6 security modules
+- **TypeScript** with full type definitions
+- **Comprehensive logging** for audit and operations
 
-## Módulos Soportados
+## Supported Modules
 
-### Módulos de Seguridad UTM/NGFW
+### UTM/NGFW Security Modules
 
-| Módulo | Descripción | Versión |
+| Module | Description | Version |
 |--------|-------------|---------|
-| **Antivirus** | Perfiles de antivirus, escaneo en tiempo real, cuarentena | V7.6 |
-| **IPS** | Intrusion Prevention System, firmas, detección de anomalías | V7.6 |
-| **Web Filter** | Filtrado de contenido web, categorías FortiGuard | V7.6 |
-| **DNS Filter** | Filtrado DNS, bloqueo de dominios maliciosos | V7.6 |
-| **Application Control** | Control de aplicaciones, firmas de aplicaciones | V7.6 |
-| **CASB** | Cloud Access Security Broker para SaaS | V7.6 |
-| **DLP** | Prevención de pérdida de datos | V7.6 |
-| **File Filter** | Filtrado de archivos por tipo | V7.6 |
-| **Email Filter** | Filtrado de spam y contenido de email | V7.6 |
-| **Video Filter** | Filtrado de contenido de video (YouTube, Vimeo, etc.) | V7.6 |
-| **VoIP** | Seguridad para tráfico VoIP/SIP | V7.6 |
+| **Antivirus** | Antivirus profiles, real-time scanning, quarantine | V7.6 |
+| **IPS** | Intrusion Prevention System, signatures, anomaly detection | V7.6 |
+| **Web Filter** | Web content filtering, FortiGuard categories | V7.6 |
+| **DNS Filter** | DNS filtering, malicious domain blocking | V7.6 |
+| **Application Control** | Application control, application signatures | V7.6 |
+| **CASB** | Cloud Access Security Broker for SaaS | V7.6 |
+| **DLP** | Data Loss Prevention | V7.6 |
+| **File Filter** | File filtering by type | V7.6 |
+| **Email Filter** | Spam and email content filtering | V7.6 |
+| **Video Filter** | Video content filtering (YouTube, Vimeo, etc.) | V7.6 |
+| **VoIP** | Security for VoIP/SIP traffic | V7.6 |
 
-### Módulos de Inspección Profunda (DPI)
+### Deep Inspection Modules (DPI)
 
-| Módulo | Descripción | Versión |
+| Module | Description | Version |
 |--------|-------------|---------|
-| **SSL/SSH Inspection** | Deep Packet Inspection para SSL/TLS y SSH | V7.6 |
+| **SSL/SSH Inspection** | Deep Packet Inspection for SSL/TLS and SSH | V7.6 |
 | **WAF** | Web Application Firewall | V7.6 |
-| **Virtual Patch** | Parches virtuales para vulnerabilidades | V7.6 |
-| **ICAP** | Integración con servidores ICAP | V7.6 |
+| **Virtual Patch** | Virtual patches for vulnerabilities | V7.6 |
+| **ICAP** | ICAP server integration | V7.6 |
 
-### Módulos de Red y VPN
+### Network and VPN Modules
 
-| Módulo | Descripción | Versión |
+| Module | Description | Version |
 |--------|-------------|---------|
-| **Firewall Policy** | Políticas de firewall IPv4/IPv6 | V7.6 |
+| **Firewall Policy** | IPv4/IPv6 firewall policies | V7.6 |
 | **NAT** | NAT, Virtual IPs, IP Pools | V7.6 |
-| **IPsec VPN** | Túneles VPN IPsec, fase 1 y 2 | V7.6 |
-| **SSL VPN** | VPN SSL con túnel y modo web | V7.6 |
+| **IPsec VPN** | IPsec VPN tunnels, phase 1 and 2 | V7.6 |
+| **SSL VPN** | SSL VPN with tunnel and web mode | V7.6 |
 | **ZTNA** | Zero Trust Network Access | V7.6 |
-| **SD-WAN** | SD-WAN, zonas, servicios, SLA | V7.6 |
-| **Routing** | Rutas estáticas, dinámicas (OSPF, BGP) | V7.6 |
+| **SD-WAN** | SD-WAN, zones, services, SLA | V7.6 |
+| **Routing** | Static and dynamic routes (OSPF, BGP) | V7.6 |
 
-### Módulos de Sistema
+### System Modules
 
-| Módulo | Descripción | Versión |
+| Module | Description | Version |
 |--------|-------------|---------|
-| **Interfaces** | Configuración de interfaces físicas y VLANs | V7.6 |
-| **HA** | Alta disponibilidad, clustering | V7.6 |
+| **Interfaces** | Physical and VLAN interface configuration | V7.6 |
+| **HA** | High Availability, clustering | V7.6 |
 | **VDOM** | Virtual Domains | V7.6 |
-| **Administradores** | Usuarios administradores, perfiles de acceso | V7.6 |
-| **Logging** | Configuración de logs, FortiAnalyzer, syslog | V7.6 |
-| **SNMP** | Configuración SNMP | V7.6 |
-| **Certificates** | Gestión de certificados | V7.6 |
-| **DHCP** | Servidores DHCP | V7.6 |
+| **Administrators** | Admin users, access profiles | V7.6 |
+| **Logging** | Log configuration, FortiAnalyzer, syslog | V7.6 |
+| **SNMP** | SNMP configuration | V7.6 |
+| **Certificates** | Certificate management | V7.6 |
+| **DHCP** | DHCP servers | V7.6 |
 
-### Módulos de Gestión de Dispositivos
+### Device Management Modules
 
-| Módulo | Descripción | Versión |
+| Module | Description | Version |
 |--------|-------------|---------|
-| **Switch Controller** | Gestión de FortiSwitches | V7.6 |
-| **Wireless Controller** | Gestión de FortiAPs y WLANs | V7.6 |
-| **FortiExtender** | Gestión de FortiExtenders | V7.6 |
+| **Switch Controller** | FortiSwitch management | V7.6 |
+| **Wireless Controller** | FortiAP and WLAN management | V7.6 |
+| **FortiExtender** | FortiExtender management | V7.6 |
 
-## Instalación
+## Installation
 
 ```bash
 npm install fortigate-mcp-v7.6
 ```
 
-## Uso Rápido
+## Quick Start
 
 ```typescript
 import { FortiGateMCP } from 'fortigate-mcp-v7.6';
 
-// Configuración de conexión
+// Connection configuration
 const config = {
   host: '192.168.1.99',
   port: 443,
-  token: 'tu-api-token-aqui',
+  token: 'your-api-token-here',
   https: true,
   verifySsl: false,
   vdom: 'root'
 };
 
-// Inicializar MCP
+// Initialize MCP
 const mcp = new FortiGateMCP(config);
 
-// Verificar conectividad
+// Check connectivity
 const connected = await mcp.checkConnectivity();
-console.log(`Conectado: ${connected}`);
+console.log(`Connected: ${connected}`);
 
-// Obtener información del sistema
+// Get system information
 const info = await mcp.getSystemInfo();
 console.log(`FortiOS ${info.version} - ${info.hostname}`);
 ```
 
-## Configuración
+## Configuration
 
-### Crear un Token de API en FortiGate
+### Creating an API Token in FortiGate
 
-1. Acceder a **System > Administrators**
-2. Crear un nuevo administrador tipo **REST API**
-3. Asignar un **Admin Profile** con los permisos necesarios
-4. Guardar y copiar el token generado
+1. Navigate to **System > Administrators**
+2. Create a new **REST API** administrator
+3. Assign an **Admin Profile** with required permissions
+4. Save and copy the generated token
 
-### Configuración de Permisos
+### Permission Configuration
 
-| Funcionalidad | Permisos Requeridos |
+| Functionality | Required Permissions |
 |---------------|---------------------|
-| Lectura de configuración | `read` en los módulos correspondientes |
-| Modificación de configuración | `read-write` en los módulos correspondientes |
-| Monitoreo | `read` en Log & Report |
-| Administración del sistema | `read-write` en System |
+| Read configuration | `read` on corresponding modules |
+| Modify configuration | `read-write` on corresponding modules |
+| Monitoring | `read` on Log & Report |
+| System administration | `read-write` on System |
 
-## Módulos de Seguridad
+## Security Modules
 
 ### Antivirus
 
 ```typescript
-// Crear un perfil de antivirus
+// Create an antivirus profile
 const profile = await mcp.antivirus.createProfile({
-  name: 'AV-Profile-Corporativo',
+  name: 'AV-Corporate-Profile',
   inspection_mode: 'flow',
   ftgd_analytics: 'suspicious',
   http: {
@@ -146,34 +146,34 @@ const profile = await mcp.antivirus.createProfile({
   }
 });
 
-// Obtener perfiles existentes
+// Get existing profiles
 const profiles = await mcp.antivirus.getProfiles();
 
-// Actualizar un perfil
-await mcp.antivirus.updateProfile('AV-Profile-Corporativo', {
+// Update a profile
+await mcp.antivirus.updateProfile('AV-Corporate-Profile', {
   ftgd_analytics: 'everything'
 });
 
-// Eliminar un perfil
-await mcp.antivirus.deleteProfile('AV-Profile-Corporativo');
+// Delete a profile
+await mcp.antivirus.deleteProfile('AV-Corporate-Profile');
 
-// Obtener logs de detección
+// Get detection logs
 const logs = await mcp.antivirus.getDetectionLogs({
   since: '2024-01-01',
   limit: 100
 });
 
-// Actualizar base de datos
+// Update database
 await mcp.antivirus.updateDatabase();
 ```
 
 ### IPS (Intrusion Prevention System)
 
 ```typescript
-// Crear un sensor IPS
+// Create an IPS sensor
 const sensor = await mcp.ips.createSensor({
-  name: 'IPS-Corporativo',
-  comment: 'Sensor IPS para red corporativa',
+  name: 'IPS-Corporate',
+  comment: 'IPS sensor for corporate network',
   entries: [
     {
       id: 1,
@@ -192,18 +192,18 @@ const sensor = await mcp.ips.createSensor({
   ]
 });
 
-// Agregar una entrada al sensor
-await mcp.ips.addEntry('IPS-Corporativo', {
+// Add an entry to the sensor
+await mcp.ips.addEntry('IPS-Corporate', {
   id: 3,
   protocol: ['TCP'],
   action: 'block',
   status: 'enable'
 });
 
-// Configurar escaneo de botnet
-await mcp.ips.setBotnetScanning('IPS-Corporativo', 'block');
+// Configure botnet scanning
+await mcp.ips.setBotnetScanning('IPS-Corporate', 'block');
 
-// Obtener intrusiones detectadas
+// Get detected intrusions
 const intrusions = await mcp.ips.getDetectedIntrusions({
   since: '2024-01-01',
   limit: 100
@@ -213,9 +213,9 @@ const intrusions = await mcp.ips.getDetectedIntrusions({
 ### Web Filter
 
 ```typescript
-// Crear un perfil de filtrado web
+// Create a web filter profile
 const profile = await mcp.webfilter.createProfile({
-  name: 'WF-Corporativo',
+  name: 'WF-Corporate',
   inspection_mode: 'flow',
   ftgd_wf: {
     filters: [
@@ -235,18 +235,18 @@ const profile = await mcp.webfilter.createProfile({
   }
 });
 
-// Agregar filtro de categoría
-await mcp.webfilter.addFortiguardFilter('WF-Corporativo', {
+// Add a category filter
+await mcp.webfilter.addFortiguardFilter('WF-Corporate', {
   id: 3,
   category: 88, // Spam
   action: 'block',
   log: 'enable'
 });
 
-// Configurar logging
-await mcp.webfilter.setUrlLogging('WF-Corporativo', 'enable', 'enable');
+// Configure logging
+await mcp.webfilter.setUrlLogging('WF-Corporate', 'enable', 'enable');
 
-// Obtener URLs bloqueadas
+// Get blocked URLs
 const blocked = await mcp.webfilter.getBlockedUrls({
   limit: 100
 });
@@ -255,21 +255,21 @@ const blocked = await mcp.webfilter.getBlockedUrls({
 ### CASB (Cloud Access Security Broker)
 
 ```typescript
-// Crear un perfil CASB para Microsoft 365
+// Create a CASB profile for Microsoft 365
 const profile = await mcp.casb.createMicrosoft365Profile('CASB-M365', {
   blockUpload: false,
   blockDownload: true,
   blockShare: true,
-  allowedTenants: ['miempresa.com', 'miempresa.onmicrosoft.com']
+  allowedTenants: ['mycompany.com', 'mycompany.onmicrosoft.com']
 });
 
-// Crear un perfil CASB para Google Workspace
+// Create a CASB profile for Google Workspace
 const googleProfile = await mcp.casb.createGoogleWorkspaceProfile('CASB-Google', {
   blockUpload: true,
-  allowedDomains: ['miempresa.com']
+  allowedDomains: ['mycompany.com']
 });
 
-// Agregar una aplicación SaaS
+// Add a SaaS application
 await mcp.casb.addSaasApplication('CASB-M365', {
   name: 'dropbox',
   status: 'enable',
@@ -277,61 +277,61 @@ await mcp.casb.addSaasApplication('CASB-M365', {
   log: 'enable'
 });
 
-// Obtener eventos de CASB
+// Get CASB events
 const events = await mcp.casb.getEvents({
   since: '2024-01-01',
   limit: 100
 });
 
-// Obtener violaciones de políticas
+// Get policy violations
 const violations = await mcp.casb.getPolicyViolations();
 ```
 
 ### SSL/SSH Inspection (DPI)
 
 ```typescript
-// Crear un perfil de deep inspection
+// Create a deep inspection profile
 const profile = await mcp.sslInspection.createDeepInspectionProfile(
-  'DPI-Profundo',
-  'Mi-Certificado-CA'
+  'DPI-Deep',
+  'My-CA-Certificate'
 );
 
-// Crear un perfil de certificate inspection
+// Create a certificate inspection profile
 const certProfile = await mcp.sslInspection.createCertificateInspectionProfile(
-  'DPI-Certificado'
+  'DPI-Certificate'
 );
 
-// Configurar inspección HTTPS
-await mcp.sslInspection.setHttpsInspectionMode('DPI-Profundo', 'deep-inspection');
+// Configure HTTPS inspection
+await mcp.sslInspection.setHttpsInspectionMode('DPI-Deep', 'deep-inspection');
 
-// Agregar exención por dirección
-await mcp.sslInspection.addAddressExemption('DPI-Profundo', [
+// Add address exemption
+await mcp.sslInspection.addAddressExemption('DPI-Deep', [
   '10.0.0.0/8',
   '192.168.1.0/24'
 ]);
 
-// Agregar exención por FQDN wildcard
-await mcp.sslInspection.addWildcardFqdnExemption('DPI-Profundo', [
-  '*.banco.com',
-  '*.salud.gob'
+// Add wildcard FQDN exemption
+await mcp.sslInspection.addWildcardFqdnExemption('DPI-Deep', [
+  '*.bank.com',
+  '*.health.gov'
 ]);
 
-// Configurar versiones SSL/TLS
+// Configure SSL/TLS versions
 await mcp.sslInspection.setSslVersions(
-  'DPI-Profundo',
+  'DPI-Deep',
   'https',
   'tls-1.2',
   'tls-1.3'
 );
 
-// Obtener anomalías SSL detectadas
+// Get detected SSL anomalies
 const anomalies = await mcp.sslInspection.getSslAnomalies();
 ```
 
-## Validación de Comandos
+## Command Validation
 
 ```typescript
-// Validar un comando antes de ejecutarlo
+// Validate a command before execution
 const validation = mcp.getCommandValidator().validateCommand(
   'config firewall policy',
   {
@@ -342,27 +342,27 @@ const validation = mcp.getCommandValidator().validateCommand(
 );
 
 if (!validation.valid) {
-  console.error('Errores:', validation.errors);
-  console.warn('Advertencias:', validation.warnings);
+  console.error('Errors:', validation.errors);
+  console.warn('Warnings:', validation.warnings);
 }
 
-// Validar una operación de API
+// Validate an API operation
 const apiValidation = mcp.getCommandValidator().validateApiOperation(
   'POST',
   '/api/v2/cmdb/firewall/policy',
-  { name: 'Nueva-Politica', action: 'accept' },
+  { name: 'New-Policy', action: 'accept' },
   { module: 'firewall', operation: 'create' }
 );
 
-// Validar un perfil de seguridad
+// Validate a security profile
 const profileValidation = mcp.getCommandValidator().validateSecurityProfile(
   { name: 'Test', inspection_mode: 'flow' },
   'antivirus'
 );
 
-// Validar una política de firewall
+// Validate a firewall policy
 const policyValidation = mcp.getCommandValidator().validateFirewallPolicy({
-  name: 'Politica-Test',
+  name: 'Policy-Test',
   srcintf: [{ name: 'port1' }],
   dstintf: [{ name: 'port2' }],
   srcaddr: [{ name: 'all' }],
@@ -372,154 +372,154 @@ const policyValidation = mcp.getCommandValidator().validateFirewallPolicy({
 });
 ```
 
-## Análisis de Cambios
+## Change Analysis
 
 ```typescript
-// Los cambios se registran automáticamente al usar los módulos
+// Changes are automatically logged when using modules
 
-// Obtener todos los cambios
+// Get all changes
 const allChanges = mcp.getChangeAnalyzer().getAllChanges();
 
-// Obtener cambios por módulo
+// Get changes by module
 const firewallChanges = mcp.getChangeAnalyzer().getChangesByModule('firewall');
 
-// Obtener cambios por operación
+// Get changes by operation
 const creations = mcp.getChangeAnalyzer().getChangesByOperation('create');
 
-// Analizar un cambio específico
+// Analyze a specific change
 const analysis = mcp.getChangeAnalyzer().analyzeChange(changeId);
-console.log(`Impacto: ${analysis?.impact.level}`);
-console.log(`Descripción: ${analysis?.impact.description}`);
-console.log(`Recursos afectados: ${analysis?.impact.affectedResources}`);
+console.log(`Impact: ${analysis?.impact.level}`);
+console.log(`Description: ${analysis?.impact.description}`);
+console.log(`Affected resources: ${analysis?.impact.affectedResources}`);
 
-// Generar un diff entre estados
+// Generate a diff between states
 const diff = mcp.getChangeAnalyzer().generateDiff(oldState, newState);
 
-// Generar un informe de cambios
+// Generate a change report
 const report = mcp.getChangeAnalyzer().generateReport(
   new Date('2024-01-01'),
   new Date()
 );
 
-// Exportar cambios a JSON
+// Export changes to JSON
 const jsonExport = mcp.getChangeAnalyzer().exportToJson();
 
-// Obtener estadísticas
+// Get statistics
 const stats = mcp.getChangeAnalyzer().getStatistics();
-console.log(`Total cambios: ${stats.totalChanges}`);
-console.log(`Por módulo:`, stats.changesByModule);
+console.log(`Total changes: ${stats.totalChanges}`);
+console.log(`By module:`, stats.changesByModule);
 ```
 
-## Función de Rollback
+## Rollback Functionality
 
 ```typescript
-// Crear un plan de rollback
+// Create a rollback plan
 const plan = await mcp.getRollbackManager().createRollbackPlan(changeId);
-console.log(`Pasos: ${plan?.steps.length}`);
-console.log(`Tiempo estimado: ${plan?.estimatedTime}s`);
-console.log(`Riesgo: ${plan?.risk}`);
+console.log(`Steps: ${plan?.steps.length}`);
+console.log(`Estimated time: ${plan?.estimatedTime}s`);
+console.log(`Risk: ${plan?.risk}`);
 
-// Previsualizar un rollback
+// Preview a rollback
 const preview = await mcp.getRollbackManager().previewRollback(changeId);
-console.log(`Análisis:`, preview.analysis);
+console.log(`Analysis:`, preview.analysis);
 
-// Verificar si un cambio puede hacer rollback
+// Check if a change can be rolled back
 const canRollback = mcp.getRollbackManager().canRollback(changeId);
 
-// Ejecutar un rollback (dry run)
+// Execute a rollback (dry run)
 const dryRunResult = await mcp.getRollbackManager().executeRollback(changeId, {
   dryRun: true
 });
 
-// Ejecutar un rollback real
+// Execute an actual rollback
 const result = await mcp.getRollbackManager().executeRollback(changeId, {
   dryRun: false,
   skipVerification: false,
-  timeout: 300000 // 5 minutos
+  timeout: 300000 // 5 minutes
 });
 
 if (result.success) {
-  console.log('Rollback exitoso:', result.message);
-  console.log('Detalles:', result.details);
+  console.log('Rollback successful:', result.message);
+  console.log('Details:', result.details);
 } else {
-  console.error('Rollback fallido:', result.error);
+  console.error('Rollback failed:', result.error);
 }
 
-// Ejecutar rollback de múltiples cambios
+// Execute rollback for multiple changes
 const batchResults = await mcp.getRollbackManager().executeBatchRollback(
   [changeId1, changeId2, changeId3],
   { stopOnError: true }
 );
 
-// Obtener historial de rollbacks
+// Get rollback history
 const history = mcp.getRollbackManager().getRollbackHistory();
 
-// Generar informe de rollbacks
+// Generate rollback report
 const rollbackReport = mcp.getRollbackManager().generateReport();
 ```
 
-## Gestión de Tokens
+## Token Management
 
 ```typescript
-// Validar un token
+// Validate a token
 const tokenValidation = mcp.getTokenValidator().validate(token);
 if (!tokenValidation.valid) {
-  console.error('Token inválido:', tokenValidation.errors);
+  console.error('Invalid token:', tokenValidation.errors);
 }
 
-// Obtener estadísticas del token
+// Get token statistics
 const tokenStats = mcp.getTokenValidator().getTokenStats(token);
-console.log(`Entropía: ${tokenStats.entropy}`);
-console.log(`Caracteres únicos: ${tokenStats.uniqueChars}`);
+console.log(`Entropy: ${tokenStats.entropy}`);
+console.log(`Unique characters: ${tokenStats.uniqueChars}`);
 
-// Máscara el token para logging seguro
+// Mask token for secure logging
 const masked = mcp.getTokenValidator().maskToken(token);
-console.log(`Token: ${masked}`); // muestra: abcd****wxyz
+console.log(`Token: ${masked}`); // shows: abcd****wxyz
 
-// Actualizar el token
-mcp.updateToken('nuevo-token-aqui');
+// Update the token
+mcp.updateToken('new-token-here');
 ```
 
-## Monitoreo y Logs
+## Monitoring and Logs
 
 ```typescript
-// Obtener estadísticas del sistema
+// Get system statistics
 const health = await mcp.getHealthStatus();
 const resources = await mcp.getResourceStats();
 
-// Obtener estado de interfaces
+// Get interface status
 const interfaces = await mcp.getInterfaceStatus();
 
-// Obtener estadísticas de sesiones
+// Get session statistics
 const sessions = await mcp.getSessionStats();
 
-// Obtener estadísticas de políticas
+// Get policy statistics
 const policies = await mcp.getPolicyStats();
 
-// Generar informe del sistema
+// Generate system report
 const systemReport = await mcp.generateSystemReport();
 
-// Obtener estadísticas de API
+// Get API statistics
 const apiStats = mcp.getApiStats();
-console.log(`Solicitudes: ${apiStats.requestCount}`);
+console.log(`Requests: ${apiStats.requestCount}`);
 ```
 
-## Configuración Avanzada
+## Advanced Configuration
 
-### Cambiar VDOM
+### Change VDOM
 
 ```typescript
-// Cambiar a un VDOM específico
-mcp.setVdom('cliente-a');
+// Change to a specific VDOM
+mcp.setVdom('customer-a');
 
-// Todas las operaciones subsiguientes usarán este VDOM
+// All subsequent operations will use this VDOM
 const policies = await mcp.firewall.getPolicies();
 
-// Volver al VDOM root
+// Return to root VDOM
 mcp.setVdom('root');
 ```
 
-### Manejo de Errores
+### Error Handling
 
 ```typescript
 import { FortiGateMCP } from 'fortigate-mcp-v7.6';
@@ -527,21 +527,21 @@ import { FortiGateMCP } from 'fortigate-mcp-v7.6';
 try {
   const mcp = new FortiGateMCP(config);
   
-  // Verificar conectividad primero
+  // Check connectivity first
   const connected = await mcp.checkConnectivity();
   if (!connected) {
-    throw new Error('No se pudo conectar al FortiGate');
+    throw new Error('Could not connect to FortiGate');
   }
   
-  // Operaciones...
+  // Operations...
   
 } catch (error) {
   if (error.message.includes('401')) {
-    console.error('Error de autenticación - verifique el token');
+    console.error('Authentication error - check token');
   } else if (error.message.includes('403')) {
-    console.error('Acceso denegado - verifique permisos');
+    console.error('Access denied - check permissions');
   } else if (error.message.includes('404')) {
-    console.error('Recurso no encontrado');
+    console.error('Resource not found');
   } else {
     console.error('Error:', error.message);
   }
@@ -550,59 +550,59 @@ try {
 
 ### Logging
 
-Los logs se almacenan en el directorio `logs/`:
+Logs are stored in the `logs/` directory:
 
-- `combined.log` - Logs generales
-- `error.log` - Errores
-- `audit.log` - Auditoría de cambios
-- `rollback.log` - Operaciones de rollback
-- `validation.log` - Validaciones
+- `combined.log` - General logs
+- `error.log` - Errors
+- `audit.log` - Change audit
+- `rollback.log` - Rollback operations
+- `validation.log` - Validations
 
 ```typescript
 import { logger, auditLogger } from 'fortigate-mcp-v7.6';
 
-// Agregar logs personalizados
-logger.info('Operación completada', { detalles: '...' });
-auditLogger.info('Cambio importante realizado', { cambio: '...' });
+// Add custom logs
+logger.info('Operation completed', { details: '...' });
+auditLogger.info('Important change made', { change: '...' });
 ```
 
 ## API Reference
 
 ### FortiGateMCP
 
-| Método | Descripción |
+| Method | Description |
 |--------|-------------|
-| `checkConnectivity()` | Verifica conexión con FortiGate |
-| `getSystemInfo()` | Obtiene información del sistema |
-| `getVersion()` | Obtiene versión de FortiOS |
-| `setVdom(vdom)` | Cambia el VDOM actual |
-| `getCurrentVdom()` | Obtiene el VDOM actual |
-| `updateToken(token)` | Actualiza el token de autenticación |
-| `generateSystemReport()` | Genera informe completo |
-| `getHealthStatus()` | Obtiene estado de salud |
-| `getResourceStats()` | Obtiene estadísticas de recursos |
+| `checkConnectivity()` | Check connection to FortiGate |
+| `getSystemInfo()` | Get system information |
+| `getVersion()` | Get FortiOS version |
+| `setVdom(vdom)` | Change current VDOM |
+| `getCurrentVdom()` | Get current VDOM |
+| `updateToken(token)` | Update authentication token |
+| `generateSystemReport()` | Generate complete report |
+| `getHealthStatus()` | Get health status |
+| `getResourceStats()` | Get resource statistics |
 
-### Módulos
+### Modules
 
-Cada módulo proporciona métodos CRUD estándar:
+Each module provides standard CRUD methods:
 
-| Método | Descripción |
+| Method | Description |
 |--------|-------------|
-| `getAll(params?)` | Obtiene todos los recursos |
-| `getById(id)` | Obtiene un recurso específico |
-| `create(data)` | Crea un nuevo recurso |
-| `update(id, data)` | Actualiza un recurso |
-| `delete(id)` | Elimina un recurso |
-| `clone(id, newName)` | Clona un recurso |
-| `exists(id)` | Verifica si existe un recurso |
+| `getAll(params?)` | Get all resources |
+| `getById(id)` | Get a specific resource |
+| `create(data)` | Create a new resource |
+| `update(id, data)` | Update a resource |
+| `delete(id)` | Delete a resource |
+| `clone(id, newName)` | Clone a resource |
+| `exists(id)` | Check if a resource exists |
 
-## Requisitos
+## Requirements
 
 - Node.js >= 18.0.0
-- FortiGate con FortiOS V7.6
-- Token de API de FortiGate
+- FortiGate with FortiOS V7.6
+- FortiGate API Token
 
-## Dependencias
+## Dependencies
 
 - axios: ^1.6.0
 - zod: ^3.22.4
@@ -611,24 +611,25 @@ Cada módulo proporciona métodos CRUD estándar:
 - uuid: ^9.0.1
 - date-fns: ^2.30.0
 
-## Licencia
+## License
 
 MIT
 
-## Soporte
+## Support
 
-Para reportar problemas o solicitar características, por favor usar el issue tracker del proyecto.
+To report issues or request features, please use the project issue tracker.
 
 ## Changelog
 
 ### v1.0.0
-- Lanzamiento inicial
-- Soporte completo para FortiOS V7.6
-- Todos los módulos de seguridad implementados
-- Sistema de validación de comandos
-- Análisis de cambios con impacto
-- Función de rollback completa
+- Initial release
+- Full support for FortiOS V7.6
+- All security modules implemented
+- Command validation system
+- Change analysis with impact assessment
+- Complete rollback functionality
 
 ---
 
-**Nota**: Este MCP está diseñado para administradores de FortiGate con conocimientos de redes y seguridad. Siempre realice pruebas en un entorno de laboratorio antes de implementar cambios en producción.
+**Note**: This MCP is designed for FortiGate administrators with networking and security knowledge. Always test in a lab environment before deploying changes to production.
+
