@@ -4,6 +4,7 @@
  */
 
 import axios, { AxiosInstance, AxiosError } from 'axios';
+import https from 'https';
 import {
   FortiGateConfig,
   FortiGateResponse,
@@ -91,6 +92,7 @@ export class FortiGateClient {
   private client: AxiosInstance;
   private config: FortiGateConfig;
   private sessionKey: string | null = null;
+  private isConnected = false;
 
   constructor(config: FortiGateConfig) {
     this.config = {
@@ -101,16 +103,30 @@ export class FortiGateClient {
       ...config,
     };
 
+    // Validar configuración
+    if (!this.config.host) {
+      throw new FortiGateError('FORTIGATE_HOST es requerido');
+    }
+    if (!this.config.apiToken) {
+      throw new FortiGateError('FORTIGATE_API_TOKEN (o FORTIGATE_TOKEN) es requerido');
+    }
+
     const baseURL = `${this.config.https ? 'https' : 'http'}://${this.config.host}:${this.config.port}`;
 
     this.client = axios.create({
       baseURL,
       timeout: this.config.timeout,
-      httpsAgent: this.config.verifySsl ? undefined : { rejectUnauthorized: false },
+      httpsAgent: this.config.verifySsl ? undefined : new https.Agent({ 
+        rejectUnauthorized: false,
+        keepAlive: true,
+        timeout: this.config.timeout,
+      }),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
+      maxRedirects: 5,
+      validateStatus: (status) => status < 500, // No rechazar errores 4xx, los manejamos nosotros
     });
 
     // Interceptor para agregar token de autenticación
@@ -128,7 +144,18 @@ export class FortiGateClient {
 
     // Interceptor para manejar errores
     this.client.interceptors.response.use(
-      (response) => response,
+      (response) => {
+        // Verificar si la respuesta contiene un error de FortiGate
+        if (response.data && typeof response.data === 'object') {
+          const data = response.data as FortiGateErrorResponse;
+          if (data.http_method && data.status === 'error') {
+            const errorMessage = (data as unknown as Record<string, string>).error || 
+                                'Unknown FortiGate error';
+            throw new FortiGateError(errorMessage, response.status, data);
+          }
+        }
+        return response;
+      },
       (error: AxiosError<FortiGateErrorResponse>) => {
         if (error.response) {
           const status = error.response.status;
@@ -213,8 +240,17 @@ export class FortiGateClient {
   // ==================== SYSTEM INFO ====================
   
   async getSystemStatus(): Promise<SystemInfo> {
-    const response = await this.get<SystemInfo>('/api/v2/monitor/system/status');
-    return response.results;
+    try {
+      const response = await this.get<SystemInfo>('/api/v2/monitor/system/status');
+      this.isConnected = true;
+      return response.results;
+    } catch (error) {
+      this.isConnected = false;
+      if (error instanceof FortiGateError) {
+        throw error;
+      }
+      throw new FortiGateError(`Failed to get system status: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
 
   async getSystemTime(): Promise<unknown> {

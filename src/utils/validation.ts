@@ -136,14 +136,22 @@ export const CreateVIPGroupSchema = z.object({
 export const UpdateVIPGroupSchema = CreateVIPGroupSchema.partial().omit({ name: true });
 
 // Esquemas para Interfaces
-export const UpdateInterfaceSchema = z.object({
+export const CreateInterfaceSchema = z.object({
+  name: z.string().min(1, 'Nombre es requerido'),
   alias: z.string().optional(),
   ip: z.string().optional(),
   allowaccess: z.string().optional(),
   description: z.string().optional(),
   status: z.enum(['up', 'down']).optional(),
   role: z.enum(['lan', 'wan', 'dmz', 'undefined']).optional(),
+  type: z.enum(['physical', 'vlan', 'loopback', 'tunnel', 'aggregate', 'redundant', 'zone']).optional(),
+  mode: z.enum(['static', 'dhcp', 'pppoe']).optional(),
+  vlanid: z.number().optional(),
+  interface: z.string().optional(),
+  vdom: z.string().optional(),
 });
+
+export const UpdateInterfaceSchema = CreateInterfaceSchema.partial().omit({ name: true });
 
 // Esquemas para Static Routes
 export const CreateStaticRouteSchema = z.object({

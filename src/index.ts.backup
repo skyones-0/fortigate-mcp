@@ -491,28 +491,6 @@ const TOOLS = [
     },
   },
   {
-    name: 'create_interface',
-    description: 'Crea una nueva interfaz (VLAN, Loopback, Tunnel, etc.)',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        name: { type: 'string', description: 'Nombre de la interfaz (e.g., port8, vlan100, loopback1)' },
-        alias: { type: 'string', description: 'Alias o nombre descriptivo (e.g., SAN, Management)' },
-        ip: { type: 'string', description: 'Dirección IP con máscara (e.g., 192.168.1.1 255.255.255.0)' },
-        type: { type: 'string', enum: ['physical', 'vlan', 'loopback', 'tunnel', 'aggregate', 'redundant'], description: 'Tipo de interfaz' },
-        mode: { type: 'string', enum: ['static', 'dhcp', 'pppoe'], description: 'Modo de direccionamiento' },
-        vlanid: { type: 'number', description: 'VLAN ID (para interfaces VLAN)' },
-        interface: { type: 'string', description: 'Interfaz padre (para interfaces VLAN)' },
-        allowaccess: { type: 'string', description: 'Accesos permitidos (ping, https, ssh, http, snmp, etc.)' },
-        description: { type: 'string', description: 'Descripción de la interfaz' },
-        status: { type: 'string', enum: ['up', 'down'], description: 'Estado inicial' },
-        role: { type: 'string', enum: ['lan', 'wan', 'dmz', 'undefined'], description: 'Rol de la interfaz' },
-        vdom: { type: 'string', description: 'VDOM (default: root)' },
-      },
-      required: ['name'],
-    },
-  },
-  {
     name: 'update_interface',
     description: 'Actualiza una interfaz existente',
     inputSchema: {
@@ -1809,34 +1787,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             {
               type: 'text',
               text: JSON.stringify(iface || { error: 'Interface not found' }, null, 2),
-            },
-          ],
-        };
-      }
-
-      case 'create_interface': {
-        const validatedData = validation.validateData(validation.CreateInterfaceSchema, args);
-        // Build interface data - FortiGate expects different structure
-        const ifaceData: Record<string, unknown> = {
-          name: validatedData.name,
-        };
-        if (validatedData.alias) ifaceData.alias = validatedData.alias;
-        if (validatedData.ip) ifaceData.ip = validatedData.ip;
-        if (validatedData.type) ifaceData.type = validatedData.type;
-        if (validatedData.mode) ifaceData.mode = validatedData.mode;
-        if (validatedData.vlanid) ifaceData.vlanid = validatedData.vlanid;
-        if (validatedData.interface) ifaceData.interface = validatedData.interface;
-        if (validatedData.allowaccess) ifaceData.allowaccess = validatedData.allowaccess;
-        if (validatedData.description) ifaceData.description = validatedData.description;
-        if (validatedData.status) ifaceData.status = validatedData.status;
-        if (validatedData.role) ifaceData.role = validatedData.role;
-        
-        const result = await client.post('/api/v2/cmdb/system/interface', ifaceData, vdom ? { vdom } : {});
-        return {
-          content: [
-            {
-              type: 'text',
-              text: JSON.stringify(result, null, 2),
             },
           ],
         };
